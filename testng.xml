@@ -1,0 +1,29 @@
+<suite name="Proton Mail Suite">
+
+    <listeners>
+
+        <listener class-name="utilities.TestListener"/>
+
+    </listeners>
+
+    <test name="Proton Mail Tests">
+
+        <classes>
+
+         <class name="tests.LoginTest"/>
+
+            <class name="tests.InboxTest"/>
+
+            <class name="tests.RecipientTest"/>
+
+            <class name="tests.SubjectTest"/>
+
+            <class name="tests.BodyTest"/>
+
+            <class name="tests.SendEmailTest"/>
+
+        </classes>
+
+    </test>
+
+</suite>

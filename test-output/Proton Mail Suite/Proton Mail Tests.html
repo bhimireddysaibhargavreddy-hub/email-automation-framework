@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>TestNG:  Proton Mail Tests</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Proton Mail Tests</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>13/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Sep 08 17:10:48 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>142 seconds (142618 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.SendEmailTest.sendEmailWithoutRecipient()'><b>sendEmailWithoutRecipient</b><br>Test class: tests.SendEmailTest<br>Parameters: {TestCase=SendEmailNegativeTest, Username=, Password=, Recipient=, InvalidRecipient=, Subject=, Body=, Expected=Please add at least one recipient.}</td>
+<td></td>
+<td>0</td>
+<td>tests.SendEmailTest@72d6b3ba</td></tr>
+<tr>
+<td title='tests.RecipientTest.verifyInvalidRecipient()'><b>verifyInvalidRecipient</b><br>Test class: tests.RecipientTest<br>Parameters: {TestCase=RecipientNegativeTest, Username=, Password=, Recipient=, InvalidRecipient=bhimireddysaibhargavreddy@proton, Subject=, Body=, Expected=InvalidRecipient}</td>
+<td></td>
+<td>13</td>
+<td>tests.RecipientTest@4808bc9b</td></tr>
+<tr>
+<td title='tests.RecipientTest.verifyRecipient()'><b>verifyRecipient</b><br>Test class: tests.RecipientTest<br>Parameters: {TestCase=RecipientTest, Username=, Password=, Recipient=bhimireddysaibhargavreddy@proton.me, InvalidRecipient=, Subject=, Body=, Expected=RecipientAccepted}</td>
+<td></td>
+<td>0</td>
+<td>tests.RecipientTest@4808bc9b</td></tr>
+<tr>
+<td title='tests.LoginTest.loginWithWrongPassword()'><b>loginWithWrongPassword</b><br>Test class: tests.LoginTest<br>Parameters: {TestCase=LoginWrongPasswordTest, Username=sai2058, Password=7781, Recipient=, InvalidRecipient=, Subject=, Body=, Expected=LoginFailure}</td>
+<td></td>
+<td>3</td>
+<td>tests.LoginTest@28194a50</td></tr>
+<tr>
+<td title='tests.LoginTest.loginWithWrongUsernameAndPassword()'><b>loginWithWrongUsernameAndPassword</b><br>Test class: tests.LoginTest<br>Parameters: {TestCase=LoginWrongBothTest, Username=bhargav, Password=7781, Recipient=, InvalidRecipient=, Subject=, Body=, Expected=LoginFailure}</td>
+<td></td>
+<td>1</td>
+<td>tests.LoginTest@28194a50</td></tr>
+<tr>
+<td title='tests.BodyTest.verifyBodyValidation()'><b>verifyBodyValidation</b><br>Test class: tests.BodyTest<br>Parameters: {TestCase=BodyNegativeTest, Username=, Password=, Recipient=bhimireddysaibhargavreddy@proton.me, InvalidRecipient=, Subject=Test Subject, Body=, Expected=BodyValidation}</td>
+<td></td>
+<td>0</td>
+<td>tests.BodyTest@1ebea008</td></tr>
+<tr>
+<td title='tests.LoginTest.loginWithWrongUsername()'><b>loginWithWrongUsername</b><br>Test class: tests.LoginTest<br>Parameters: {TestCase=LoginWrongUsernameTest, Username=bhargav, Password=Saibhargav@#7781, Recipient=, InvalidRecipient=, Subject=, Body=, Expected=LoginFailure}</td>
+<td></td>
+<td>1</td>
+<td>tests.LoginTest@28194a50</td></tr>
+<tr>
+<td title='tests.LoginTest.loginTest()'><b>loginTest</b><br>Test class: tests.LoginTest<br>Parameters: {TestCase=LoginTest, Username=sai2058, Password=Saibhargav@#77781, Recipient=, InvalidRecipient=, Subject=, Body=, Expected=LoginSuccess}</td>
+<td></td>
+<td>12</td>
+<td>tests.LoginTest@28194a50</td></tr>
+<tr>
+<td title='tests.SendEmailTest.sendEmail()'><b>sendEmail</b><br>Test class: tests.SendEmailTest<br>Parameters: {TestCase=SendEmailTest, Username=, Password=, Recipient=bhimireddysaibhargavreddy@proton.me, InvalidRecipient=, Subject=Test Subject, Body=Test Body, Expected=EmailSent}</td>
+<td></td>
+<td>15</td>
+<td>tests.SendEmailTest@72d6b3ba</td></tr>
+<tr>
+<td title='tests.SubjectTest.verifySubject()'><b>verifySubject</b><br>Test class: tests.SubjectTest<br>Parameters: {TestCase=SubjectTest, Username=, Password=, Recipient=bhimireddysaibhargavreddy@proton.me, InvalidRecipient=, Subject=Test Subject, Body=, Expected=SubjectAccepted}</td>
+<td></td>
+<td>12</td>
+<td>tests.SubjectTest@13df2a8c</td></tr>
+<tr>
+<td title='tests.BodyTest.verifyBody()'><b>verifyBody</b><br>Test class: tests.BodyTest<br>Parameters: {TestCase=BodyTest, Username=, Password=, Recipient=bhimireddysaibhargavreddy@proton.me, InvalidRecipient=, Subject=Test Subject, Body=Test Body, Expected=BodyAccepted}</td>
+<td></td>
+<td>12</td>
+<td>tests.BodyTest@1ebea008</td></tr>
+<tr>
+<td title='tests.SubjectTest.verifySubjectValidation()'><b>verifySubjectValidation</b><br>Test class: tests.SubjectTest<br>Parameters: {TestCase=SubjectNegativeTest, Username=, Password=, Recipient=bhimireddysaibhargavreddy@proton.me, InvalidRecipient=, Subject=, Body=, Expected=SubjectValidation}</td>
+<td></td>
+<td>2</td>
+<td>tests.SubjectTest@13df2a8c</td></tr>
+<tr>
+<td title='tests.InboxTest.openNewMessage()'><b>openNewMessage</b><br>Test class: tests.InboxTest</td>
+<td></td>
+<td>12</td>
+<td>tests.InboxTest@2ca26d77</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-09-08T17:10:48 IST" name="Proton Mail Suite" finished-at="2026-09-08T17:13:11 IST" duration-ms="142618">
+    <groups>
+    </groups>
+    <test started-at="2026-09-08T17:10:48 IST" name="Proton Mail Tests" finished-at="2026-09-08T17:13:11 IST" duration-ms="142618">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setUpLoginTest()[pri:0, instance:tests.LoginTest@28194a50]" started-at="2026-09-08T17:10:49 IST" name="setUpLoginTest" finished-at="2026-09-08T17:10:52 IST" duration-ms="3568" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpLoginTest -->
+        <test-method signature="loginTest(java.util.Map)[pri:0, instance:tests.LoginTest@28194a50]" started-at="2026-09-08T17:10:52 IST" name="loginTest" data-provider="loginTestData" finished-at="2026-09-08T17:11:05 IST" duration-ms="12769" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCase=LoginTest, Username=sai2058, Password=Saibhargav@#77781, Recipient=, InvalidRecipient=, Subject=, Body=, Expected=LoginSuccess}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDownLoginTest()[pri:0, instance:tests.LoginTest@28194a50]" started-at="2026-09-08T17:11:05 IST" name="tearDownLoginTest" finished-at="2026-09-08T17:11:05 IST" duration-ms="298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownLoginTest -->
+        <test-method is-config="true" signature="setUpLoginTest()[pri:0, instance:tests.LoginTest@28194a50]" started-at="2026-09-08T17:11:05 IST" name="setUpLoginTest" finished-at="2026-09-08T17:11:09 IST" duration-ms="3906" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpLoginTest -->
+        <test-method signature="loginWithWrongPassword(java.util.Map)[pri:0, instance:tests.LoginTest@28194a50]" started-at="2026-09-08T17:11:09 IST" name="loginWithWrongPassword" data-provider="wrongPasswordTestData" finished-at="2026-09-08T17:11:12 IST" duration-ms="3014" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCase=LoginWrongPasswordTest, Username=sai2058, Password=7781, Recipient=, InvalidRecipient=, Subject=, Body=, Expected=LoginFailure}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithWrongPassword -->
+        <test-method is-config="true" signature="tearDownLoginTest()[pri:0, instance:tests.LoginTest@28194a50]" started-at="2026-09-08T17:11:12 IST" name="tearDownLoginTest" finished-at="2026-09-08T17:11:13 IST" duration-ms="210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownLoginTest -->
+        <test-method is-config="true" signature="setUpLoginTest()[pri:0, instance:tests.LoginTest@28194a50]" started-at="2026-09-08T17:11:13 IST" name="setUpLoginTest" finished-at="2026-09-08T17:11:18 IST" duration-ms="5172" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpLoginTest -->
+        <test-method signature="loginWithWrongUsername(java.util.Map)[pri:0, instance:tests.LoginTest@28194a50]" started-at="2026-09-08T17:11:18 IST" name="loginWithWrongUsername" data-provider="wrongUsernameTestData" finished-at="2026-09-08T17:11:19 IST" duration-ms="1415" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCase=LoginWrongUsernameTest, Username=bhargav, Password=Saibhargav@#7781, Recipient=, InvalidRecipient=, Subject=, Body=, Expected=LoginFailure}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithWrongUsername -->
+        <test-method is-config="true" signature="tearDownLoginTest()[pri:0, instance:tests.LoginTest@28194a50]" started-at="2026-09-08T17:11:19 IST" name="tearDownLoginTest" finished-at="2026-09-08T17:11:19 IST" duration-ms="218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownLoginTest -->
+        <test-method is-config="true" signature="setUpLoginTest()[pri:0, instance:tests.LoginTest@28194a50]" started-at="2026-09-08T17:11:20 IST" name="setUpLoginTest" finished-at="2026-09-08T17:11:25 IST" duration-ms="5170" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpLoginTest -->
+        <test-method signature="loginWithWrongUsernameAndPassword(java.util.Map)[pri:0, instance:tests.LoginTest@28194a50]" started-at="2026-09-08T17:11:25 IST" name="loginWithWrongUsernameAndPassword" data-provider="wrongBothTestData" finished-at="2026-09-08T17:11:26 IST" duration-ms="1306" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCase=LoginWrongBothTest, Username=bhargav, Password=7781, Recipient=, InvalidRecipient=, Subject=, Body=, Expected=LoginFailure}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithWrongUsernameAndPassword -->
+        <test-method is-config="true" signature="tearDownLoginTest()[pri:0, instance:tests.LoginTest@28194a50]" started-at="2026-09-08T17:11:26 IST" name="tearDownLoginTest" finished-at="2026-09-08T17:11:26 IST" duration-ms="202" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownLoginTest -->
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.InboxTest">
+        <test-method is-config="true" signature="loginToInbox()[pri:0, instance:tests.InboxTest@2ca26d77]" started-at="2026-09-08T17:11:26 IST" name="loginToInbox" finished-at="2026-09-08T17:11:33 IST" duration-ms="6852" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToInbox -->
+        <test-method signature="openNewMessage()[pri:0, instance:tests.InboxTest@2ca26d77]" started-at="2026-09-08T17:11:33 IST" name="openNewMessage" finished-at="2026-09-08T17:11:45 IST" duration-ms="12107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openNewMessage -->
+        <test-method is-config="true" signature="tearDownInbox()[pri:0, instance:tests.InboxTest@2ca26d77]" started-at="2026-09-08T17:11:45 IST" name="tearDownInbox" finished-at="2026-09-08T17:11:45 IST" duration-ms="287" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownInbox -->
+      </class> <!-- tests.InboxTest -->
+      <class name="tests.SubjectTest">
+        <test-method is-config="true" signature="loginToSubjectTest()[pri:0, instance:tests.SubjectTest@13df2a8c]" started-at="2026-09-08T17:12:06 IST" name="loginToSubjectTest" finished-at="2026-09-08T17:12:13 IST" duration-ms="6805" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToSubjectTest -->
+        <test-method signature="verifySubject(java.util.Map)[pri:0, instance:tests.SubjectTest@13df2a8c]" started-at="2026-09-08T17:12:13 IST" name="verifySubject" data-provider="subjectTestData" finished-at="2026-09-08T17:12:26 IST" duration-ms="12407" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCase=SubjectTest, Username=, Password=, Recipient=bhimireddysaibhargavreddy@proton.me, InvalidRecipient=, Subject=Test Subject, Body=, Expected=SubjectAccepted}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubject -->
+        <test-method signature="verifySubjectValidation(java.util.Map)[pri:0, instance:tests.SubjectTest@13df2a8c]" started-at="2026-09-08T17:12:26 IST" name="verifySubjectValidation" data-provider="subjectNegativeTestData" finished-at="2026-09-08T17:12:28 IST" depends-on-methods="tests.SubjectTest.verifySubject" duration-ms="2501" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCase=SubjectNegativeTest, Username=, Password=, Recipient=bhimireddysaibhargavreddy@proton.me, InvalidRecipient=, Subject=, Body=, Expected=SubjectValidation}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySubjectValidation -->
+        <test-method is-config="true" signature="tearDownSubjectTest()[pri:0, instance:tests.SubjectTest@13df2a8c]" started-at="2026-09-08T17:12:28 IST" name="tearDownSubjectTest" finished-at="2026-09-08T17:12:29 IST" duration-ms="232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSubjectTest -->
+      </class> <!-- tests.SubjectTest -->
+      <class name="tests.SendEmailTest">
+        <test-method is-config="true" signature="loginToSendEmailTest()[pri:0, instance:tests.SendEmailTest@72d6b3ba]" started-at="2026-09-08T17:12:48 IST" name="loginToSendEmailTest" finished-at="2026-09-08T17:12:54 IST" duration-ms="5990" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToSendEmailTest -->
+        <test-method signature="sendEmail(java.util.Map)[pri:0, instance:tests.SendEmailTest@72d6b3ba]" started-at="2026-09-08T17:12:54 IST" name="sendEmail" data-provider="sendEmailTestData" finished-at="2026-09-08T17:13:10 IST" duration-ms="15634" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCase=SendEmailTest, Username=, Password=, Recipient=bhimireddysaibhargavreddy@proton.me, InvalidRecipient=, Subject=Test Subject, Body=Test Body, Expected=EmailSent}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendEmail -->
+        <test-method signature="sendEmailWithoutRecipient(java.util.Map)[pri:0, instance:tests.SendEmailTest@72d6b3ba]" started-at="2026-09-08T17:13:10 IST" name="sendEmailWithoutRecipient" data-provider="sendEmailNegativeTestData" finished-at="2026-09-08T17:13:10 IST" duration-ms="898" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCase=SendEmailNegativeTest, Username=, Password=, Recipient=, InvalidRecipient=, Subject=, Body=, Expected=Please add at least one recipient.}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendEmailWithoutRecipient -->
+        <test-method is-config="true" signature="tearDownSendEmailTest()[pri:0, instance:tests.SendEmailTest@72d6b3ba]" started-at="2026-09-08T17:13:10 IST" name="tearDownSendEmailTest" finished-at="2026-09-08T17:13:11 IST" duration-ms="229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownSendEmailTest -->
+      </class> <!-- tests.SendEmailTest -->
+      <class name="tests.RecipientTest">
+        <test-method is-config="true" signature="loginToRecipientTest()[pri:0, instance:tests.RecipientTest@4808bc9b]" started-at="2026-09-08T17:11:45 IST" name="loginToRecipientTest" finished-at="2026-09-08T17:11:52 IST" duration-ms="6620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToRecipientTest -->
+        <test-method signature="verifyInvalidRecipient(java.util.Map)[pri:0, instance:tests.RecipientTest@4808bc9b]" started-at="2026-09-08T17:11:52 IST" name="verifyInvalidRecipient" data-provider="recipientNegativeTestData" finished-at="2026-09-08T17:12:06 IST" duration-ms="13529" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCase=RecipientNegativeTest, Username=, Password=, Recipient=, InvalidRecipient=bhimireddysaibhargavreddy@proton, Subject=, Body=, Expected=InvalidRecipient}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidRecipient -->
+        <test-method signature="verifyRecipient(java.util.Map)[pri:0, instance:tests.RecipientTest@4808bc9b]" started-at="2026-09-08T17:12:06 IST" name="verifyRecipient" data-provider="recipientTestData" finished-at="2026-09-08T17:12:06 IST" duration-ms="477" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCase=RecipientTest, Username=, Password=, Recipient=bhimireddysaibhargavreddy@proton.me, InvalidRecipient=, Subject=, Body=, Expected=RecipientAccepted}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRecipient -->
+        <test-method is-config="true" signature="tearDownRecipientTest()[pri:0, instance:tests.RecipientTest@4808bc9b]" started-at="2026-09-08T17:12:06 IST" name="tearDownRecipientTest" finished-at="2026-09-08T17:12:06 IST" duration-ms="253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownRecipientTest -->
+      </class> <!-- tests.RecipientTest -->
+      <class name="tests.BodyTest">
+        <test-method is-config="true" signature="loginToBodyTest()[pri:0, instance:tests.BodyTest@1ebea008]" started-at="2026-09-08T17:12:29 IST" name="loginToBodyTest" finished-at="2026-09-08T17:12:34 IST" duration-ms="5831" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToBodyTest -->
+        <test-method signature="verifyBody(java.util.Map)[pri:0, instance:tests.BodyTest@1ebea008]" started-at="2026-09-08T17:12:34 IST" name="verifyBody" data-provider="bodyTestData" finished-at="2026-09-08T17:12:47 IST" duration-ms="12219" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCase=BodyTest, Username=, Password=, Recipient=bhimireddysaibhargavreddy@proton.me, InvalidRecipient=, Subject=Test Subject, Body=Test Body, Expected=BodyAccepted}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBody -->
+        <test-method signature="verifyBodyValidation(java.util.Map)[pri:0, instance:tests.BodyTest@1ebea008]" started-at="2026-09-08T17:12:47 IST" name="verifyBodyValidation" data-provider="bodyNegativeTestData" finished-at="2026-09-08T17:12:48 IST" duration-ms="799" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TestCase=BodyNegativeTest, Username=, Password=, Recipient=bhimireddysaibhargavreddy@proton.me, InvalidRecipient=, Subject=Test Subject, Body=, Expected=BodyValidation}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBodyValidation -->
+        <test-method is-config="true" signature="tearDownBodyTest()[pri:0, instance:tests.BodyTest@1ebea008]" started-at="2026-09-08T17:12:48 IST" name="tearDownBodyTest" finished-at="2026-09-08T17:12:48 IST" duration-ms="317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownBodyTest -->
+      </class> <!-- tests.BodyTest -->
+    </test> <!-- Proton Mail Tests -->
+  </suite> <!-- Proton Mail Suite -->
+</testng-results>
