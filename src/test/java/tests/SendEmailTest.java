@@ -2,7 +2,7 @@ package tests;
 
 import java.util.Map;
 
-import org.openqa.selenium.By;
+//import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -62,24 +62,24 @@ public class SendEmailTest extends BaseTest {
 
         sentPage.clickSentFolder();
 
-        System.out.println(
-                "Current URL after clicking Sent: "
-                        + driver.getCurrentUrl()
-        );
-
-        System.out.println(
-                "Page title: "
-                        + driver.getTitle()
-        );
-
-        System.out.println(
-                "Subject elements found: "
-                        + driver.findElements(
-                                By.cssSelector(
-                                        "[data-testid='message-column:subject']"
-                                )
-                        ).size()
-        );
+//        System.out.println(
+//                "Current URL after clicking Sent: "
+//                        + driver.getCurrentUrl()
+//        );
+//
+//        System.out.println(
+//                "Page title: "
+//                        + driver.getTitle()
+//        );
+//
+//        System.out.println(
+//                "Subject elements found: "
+//                        + driver.findElements(
+//                                By.cssSelector(
+//                                        "[data-testid='message-column:subject']"
+//                                )
+//                        ).size()
+//        );
 
         Assert.assertTrue(
                 sentPage.isEmailWithSubjectDisplayed(

@@ -79,10 +79,10 @@ public class BodyTest extends BaseTest {
 
         composePage.clickSend();
 
-        System.out.println(
-                "After clicking Send, current URL: "
-                + driver.getCurrentUrl()
-        );
+//        System.out.println(
+//                "After clicking Send, current URL: "
+//                + driver.getCurrentUrl()
+//        );
     }
 
     // CLOSE BROWSER

@@ -10,18 +10,15 @@ import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.testng.annotations.DataProvider;
 
 public class TestDataProvider {
 
-    @DataProvider(name = "testData")
-    public static Object[][] getTestData(String testCaseName) {
+    private static final List<Map<String, String>> ALL_TEST_DATA =
+            new ArrayList<>();
 
-        List<Map<String, String>> testDataList =
-                new ArrayList<>();
+    static {
 
-        String filePath =
-                "testdata/TestData.xlsx";
+        String filePath = "testdata/TestData.xlsx";
 
         try (Workbook workbook =
                      new XSSFWorkbook(filePath)) {
@@ -32,7 +29,6 @@ public class TestDataProvider {
             DataFormatter formatter =
                     new DataFormatter();
 
-            // Read headers
             Row headerRow =
                     sheet.getRow(0);
 
@@ -51,7 +47,6 @@ public class TestDataProvider {
                 headers.add(header);
             }
 
-            // Read each Excel row
             for (int rowIndex = 1;
                  rowIndex <= sheet.getLastRowNum();
                  rowIndex++) {
@@ -63,40 +58,25 @@ public class TestDataProvider {
                     continue;
                 }
 
-                // Read TestCase from first column
-                String currentTestCase =
-                        formatter.formatCellValue(
-                                row.getCell(0)
-                        ).trim();
+                Map<String, String> data =
+                        new LinkedHashMap<>();
 
-                // Take ONLY the requested test case
-                if (currentTestCase.equalsIgnoreCase(
-                        testCaseName)) {
+                for (int columnIndex = 0;
+                     columnIndex < headers.size();
+                     columnIndex++) {
 
-                    Map<String, String> data =
-                            new LinkedHashMap<>();
+                    String header =
+                            headers.get(columnIndex);
 
-                    // Match headers with values
-                    for (int columnIndex = 0;
-                         columnIndex < headers.size();
-                         columnIndex++) {
+                    String value =
+                            formatter.formatCellValue(
+                                    row.getCell(columnIndex)
+                            ).trim();
 
-                        String header =
-                                headers.get(columnIndex);
-
-                        String value =
-                                formatter.formatCellValue(
-                                        row.getCell(columnIndex)
-                                ).trim();
-
-                        data.put(header, value);
-                    }
-
-                    testDataList.add(data);
-
-                    // Stop after finding the required row
-                    break;
+                    data.put(header, value);
                 }
+
+                ALL_TEST_DATA.add(data);
             }
 
         } catch (Exception e) {
@@ -106,17 +86,35 @@ public class TestDataProvider {
                     e
             );
         }
+    }
 
-        // Convert List<Map> into Object[][]
+    public static Object[][] getTestData(String testCaseName) {
+
+        List<Map<String, String>> matchingData =
+                new ArrayList<>();
+
+        for (Map<String, String> data : ALL_TEST_DATA) {
+
+            String currentTestCase =
+                    data.get("TestCase");
+
+            if (currentTestCase != null
+                    && currentTestCase.equalsIgnoreCase(
+                            testCaseName)) {
+
+                matchingData.add(data);
+            }
+        }
+
         Object[][] result =
-                new Object[testDataList.size()][1];
+                new Object[matchingData.size()][1];
 
         for (int i = 0;
-             i < testDataList.size();
+             i < matchingData.size();
              i++) {
 
             result[i][0] =
-                    testDataList.get(i);
+                    matchingData.get(i);
         }
 
         return result;
